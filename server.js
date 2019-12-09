@@ -1,5 +1,9 @@
 const express = require('express');
+const connectDB = require('./config/db');
+//Instantiate app
 const app = express();
+//Connect to DB
+connectDB();
 //If no env set, will default to 5000
 const PORT = process.env.PORT || 5000;
 
