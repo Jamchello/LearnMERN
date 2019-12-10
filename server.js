@@ -6,6 +6,9 @@ const app = express();
 //Connect to DB
 connectDB();
 
+//Init middleware
+//Allows us to parse json data from requests
+app.use(express.json({ extended: false }));
 //If no env set, will default to 5000
 const PORT = process.env.PORT || 5000;
 
